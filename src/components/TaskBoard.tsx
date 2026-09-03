@@ -1,7 +1,6 @@
 'use client';
 
 import TaskCard, { TaskItem, TaskStatus } from './TaskCard';
-import { Inbox, CheckCircle2, Clock, CircleAlert } from 'lucide-react';
 
 interface TaskBoardProps {
   tasks: TaskItem[];
@@ -31,10 +30,7 @@ export default function TaskBoard({ tasks, loading, onStatusUpdated }: TaskBoard
 
   if (tasks.length === 0) {
     return (
-      <div className="bg-white border border-slate-200 border-dashed rounded-xl p-10 text-center">
-        <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3">
-          <Inbox className="w-6 h-6" />
-        </div>
+      <div className="bg-white border border-slate-200 border-dashed rounded-xl p-8 text-center">
         <h3 className="text-sm font-semibold text-slate-900 mb-1">No tasks created yet</h3>
         <p className="text-xs text-slate-500 max-w-sm mx-auto">
           Get started by entering a task title in the form above and clicking Add Task.
@@ -53,7 +49,7 @@ export default function TaskBoard({ tasks, loading, onStatusUpdated }: TaskBoard
       <div className="grid grid-cols-3 gap-3">
         <div className="bg-white p-3.5 rounded-xl border border-slate-200 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <CircleAlert className="w-4 h-4 text-amber-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span>
             <span className="text-xs font-medium text-slate-600">Todo</span>
           </div>
           <span className="text-sm font-bold text-slate-900">{todoTasks.length}</span>
@@ -61,7 +57,7 @@ export default function TaskBoard({ tasks, loading, onStatusUpdated }: TaskBoard
 
         <div className="bg-white p-3.5 rounded-xl border border-slate-200 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Clock className="w-4 h-4 text-blue-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
             <span className="text-xs font-medium text-slate-600">In Progress</span>
           </div>
           <span className="text-sm font-bold text-slate-900">{inProgressTasks.length}</span>
@@ -69,7 +65,7 @@ export default function TaskBoard({ tasks, loading, onStatusUpdated }: TaskBoard
 
         <div className="bg-white p-3.5 rounded-xl border border-slate-200 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
             <span className="text-xs font-medium text-slate-600">Done</span>
           </div>
           <span className="text-sm font-bold text-slate-900">{doneTasks.length}</span>
