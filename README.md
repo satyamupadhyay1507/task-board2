@@ -109,8 +109,8 @@ model Task {
 ### 2. Environment Setup
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/satyamupadhyay1507/task-board.git
-cd task-board
+git clone https://github.com/satyamupadhyay1507/task-board2.git
+cd task-board2
 npm install
 ```
 
