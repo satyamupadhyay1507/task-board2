@@ -10,7 +10,7 @@ Users can register an account, log in securely, create tasks with initial status
 
 - **Framework:** Next.js (App Router, Server Components & Route Handlers)
 - **Language:** TypeScript
-- **Database:** PostgreSQL
+- **Database:** MySQL
 - **ORM:** Prisma ORM
 - **Authentication:** Custom JWT session management stored in `HttpOnly` cookies
 - **Password Hashing:** `bcryptjs`
@@ -64,6 +64,11 @@ The application uses a clean relational schema with a 1-to-many relationship bet
 ### Prisma Schema Definitions
 
 ```prisma
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
 enum TaskStatus {
   TODO
   IN_PROGRESS
