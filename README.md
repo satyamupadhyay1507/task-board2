@@ -138,4 +138,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to test the 
 
 ## 🌐 Live URL
 
-- **Production Deployment:** [https://finance-tracker-green-six.vercel.app](https://finance-tracker-green-six.vercel.app) *(or updated Vercel deployment link)*
+- **Production Deployment:** [https://task-board2-eta.vercel.app/signup](https://task-board2-eta.vercel.app/signup)
